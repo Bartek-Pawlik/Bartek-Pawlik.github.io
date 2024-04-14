@@ -21,8 +21,6 @@ function calculate() {
     const iqr = q3 - q1;
    
   
-
-
     const resultHtml = `
       <p><strong>Mean:</strong> ${mean}</p>
       <p><strong>Median:</strong> ${median}</p>
