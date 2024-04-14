@@ -17,7 +17,7 @@ function calculate() {
     const sum = numbers.reduce((acc, curr) => acc + curr, 0);
     const quartiles = calculateQuartiles(sortedNumbers);
     const q1 = (quartiles[0]).toFixed(2);
-    const q3 = (quartiles[2]).toFixed(2);
+    const q3 = (quartiles[1]).toFixed(2);
     const iqr = q3 - q1;
    
   
@@ -57,16 +57,12 @@ function calculate() {
 
 
 function calculateQuartiles(numbers) {
-    numbers.sort((a, b) => a - b);
+  numbers.sort((a, b) => a - b);
 
-    const mid = Math.floor(numbers.length / 2);
-    
-    const lowerHalf = numbers.slice(0, mid);
-    const upperHalf = numbers.slice(numbers.length % 2 === 0 ? mid : mid + 1);
+  const mid = Math.floor(numbers.length / 2);
+  
+  const q1 = calculateMedian(numbers.slice(0, mid)); // Quartile 1 (Q1) includes only the lower half of the data
+  const q3 = calculateMedian(numbers.slice(mid + (numbers.length % 2 === 0 ? 0 : 1))); // Quartile 3 (Q3) includes only the upper half of the data
 
-    const q1 = calculateMedian(lowerHalf);
-    const q2 = calculateMedian(numbers);
-    const q3 = calculateMedian(upperHalf);
-
-    return [q1, q2, q3];
+  return [q1, q3];
 }
