@@ -50,7 +50,7 @@ function calculate() {
     return Object.keys(counts).filter(key => counts[key] === maxCount).join(', ');
   }
 
-  function calculateMedian2(numbers) {
+  function calculateMedian(numbers) {
     const mid = Math.floor(numbers.length / 2);
     return numbers.length % 2 === 0 ? (numbers[mid - 1] + numbers[mid]) / 2 : numbers[mid];
 }
