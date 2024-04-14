@@ -19,9 +19,7 @@ function calculate() {
     const q1 = (quartiles[0]).toFixed(2);
     const q3 = (quartiles[2]).toFixed(2);
     const iqr = q3 - q1;
-    const lowerOutlier = q1 - 1.5 * iqr;
-    const upperOutlier = q3 + 1.5 * iqr;
-  
+    
 
 
     const resultHtml = `
@@ -35,8 +33,6 @@ function calculate() {
       <p><strong>Quartile Q1:</strong> ${q1}</p>
       <p><strong>Quartile Q3:</strong> ${q3}</p>
       <p><strong>Interquartile Range (IQR):</strong> ${iqr}</p>
-      <p><strong>Lower Outlier:</strong> ${lowerOutlier}</p>
-      <p><strong>Upper Outlier:</strong> ${upperOutlier}</p>
     `;
 
     document.getElementById('result').innerHTML = resultHtml;
