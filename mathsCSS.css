@@ -1,11 +1,13 @@
 html {
     box-sizing: border-box;
     font-family: Mulish;
+    background-color: #595e66;
   }
   
   *, *:before, *:after {
     box-sizing: inherit;
   }
+
   
   * {
     margin: 0;
@@ -15,9 +17,13 @@ html {
   .top-banner {
     margin-bottom: 30px;
     text-align: center;
-    background-color: #0059ff;
+    background-color: #1c1d1f;
     height: 100px;
     padding-top: 25px;
+  }
+
+  h1 {
+    color: white;
   }
   
   .top-banner a, .top-banner span 
@@ -38,6 +44,11 @@ html {
      font-size: 20px;
   }
 
+  input {
+    background-color: #1c1d1f;
+    color: white;
+  }
+
   .btn {
     margin: auto;
     display: block;
@@ -46,20 +57,21 @@ html {
     cursor: pointer;
     outline: none;
     color: black;
-    background-color: #0059ff;
+    background-color: #1c1d1f;
     border: none;
     border-radius: 15px;
-    box-shadow: 0 9px #999;
+    box-shadow: 0 9px #111111;
     padding: 10px;
+    color: rgb(255, 255, 255);
    }
 
    .btn:hover {
-    background-color: #0059ff;
+    background-color: #1c1d1f;
    }
 
    .btn:active {
-    background-color: #0059ff;
-    box-shadow: 0 5px #666;
+    background-color: #1c1d1f;
+    box-shadow: 0 5px #000000;
     transform: translateY(4px);
    }
 
@@ -80,4 +92,15 @@ html {
         height: 30px;
         width: 300px;
         padding: 5px;
+      }
+
+      .disc {
+        font-size: 15px;
+        text-align: center;
+       
+      }
+
+      .disc2 {
+        font-size: 15px;
+        text-align: center;
       }
